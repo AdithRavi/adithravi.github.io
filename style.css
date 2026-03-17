@@ -1,0 +1,99 @@
+:root {
+    --bg-dark: #0f172a;
+    --card-dark: #1e293b;
+    --accent: #38bdf8;
+    --success: #22c55e;
+    --danger: #ef4444;
+    --text-white: #f8fafc;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #020617;
+    padding: 2rem;
+    border-right: 1px solid #334155;
+}
+
+.nav-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    border: none;
+    color: #94a3b8;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.nav-btn.active {
+    background: var(--card-dark);
+    color: var(--accent);
+}
+
+.content {
+    flex: 1;
+    padding: 3rem;
+}
+
+.calc-card {
+    background: var(--card-dark);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    background: #0f172a;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 6px;
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.calc-btn:hover { transform: translateY(-2px); }
+
+.results {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid #334155;
+}
+
+.hidden { display: none; }
