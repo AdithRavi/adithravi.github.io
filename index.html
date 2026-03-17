@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MechCalc | Engineering Suite</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h2>MechCalc 1.0</h2>
+            <nav>
+                <button class="nav-btn active">Stress/Strain</button>
+                <button class="nav-btn">Fluid Dynamics</button>
+                <button class="nav-btn">Unit Converter</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1>Stress Analysis Dashboard</h1>
+                <p>Calculate axial stress and safety factors based on material properties.</p>
+            </header>
+
+            <section class="calc-card">
+                <div class="input-group">
+                    <label>Select Material</label>
+                    <select id="material">
+                        <option value="250">Structural Steel (Yield: 250MPa)</option>
+                        <option value="95">Aluminum 6061 (Yield: 95MPa)</option>
+                        <option value="830">Titanium Alloy (Yield: 830MPa)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Applied Force (Newtons)</label>
+                    <input type="number" id="force" placeholder="e.g. 5000">
+                </div>
+
+                <div class="input-group">
+                    <label>Cross-Sectional Area (mm²)</label>
+                    <input type="number" id="area" placeholder="e.g. 100">
+                </div>
+
+                <button onclick="calculate()" class="calc-btn">Run Analysis</button>
+
+                <div id="results-box" class="results hidden">
+                    <h3>Analysis Results</h3>
+                    <p id="stress-val">Calculated Stress: --</p>
+                    <p id="fos-val">Factor of Safety: --</p>
+                    <div id="status-indicator"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
